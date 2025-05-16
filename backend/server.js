@@ -24,9 +24,9 @@ mongoose.connect(dbConfig.db)
     });
 
 // Routes
-app.use("/api/auth",require("./src/routes/Auth.route"))
-app.use("/api/consumer",require("./src/routes/Consumer.route"))
-app.use("/api/order",require("./src/routes/Order.route"))
+app.use("/auth",require("./src/routes/Auth.route"))
+app.use("/consumer",require("./src/routes/Consumer.route"))
+app.use("/order",require("./src/routes/Order.route"))
 // Middleware xử lý lỗi
 app.use((err, req, res, next) => {
     console.error(err.message);
